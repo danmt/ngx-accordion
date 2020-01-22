@@ -17,6 +17,9 @@
     border: transparent 2px solid;
     text-align: left;
     font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
   }
 
   &__trigger:focus &__title {
