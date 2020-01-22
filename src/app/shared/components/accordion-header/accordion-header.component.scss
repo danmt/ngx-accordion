@@ -1,0 +1,25 @@
+.header {
+  background-color: lightgray;
+  margin: 0;
+  border-bottom: 1px solid black;
+
+  &__trigger {
+    background: none;
+    border-style: none;
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    outline: none;
+  }
+
+  &__title {
+    pointer-events: none;
+    border: transparent 2px solid;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  &__trigger:focus &__title {
+    border-color: hsl(216, 94%, 73%);
+  }
+}

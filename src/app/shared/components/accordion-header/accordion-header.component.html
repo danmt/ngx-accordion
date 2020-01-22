@@ -1,0 +1,15 @@
+<h2 class="header">
+  <button
+    class="header__trigger"
+    [appFocusable]="isFocused"
+    (click)="togglePanel()"
+    (focus)="setFocus()"
+    (blur)="setBlur()"
+  >
+    <div class="header__title">
+      <span>Titulo</span>
+      <fa-icon *ngIf="!isOpen" [icon]="faAngleDown"></fa-icon>
+      <fa-icon *ngIf="isOpen" [icon]="faAngleUp"></fa-icon>
+    </div>
+  </button>
+</h2>

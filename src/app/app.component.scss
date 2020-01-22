@@ -1,0 +1,8 @@
+.accordion {
+  width: 500px;
+  border: 2px solid black;
+
+  &.focus {
+    border-color: hsl(216, 94%, 73%);
+  }
+}

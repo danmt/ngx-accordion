@@ -7,10 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "precommit": "lint-staged",
+    "prettify": "prettier --write ./**/*.{json,css,scss,md,js,ts}"
   },
   "private": true,
   "dependencies": {
+    "@angular-buddies/prettier": "^1.0.0-alpha.3",
     "@angular/animations": "~8.1.3",
     "@angular/common": "~8.1.3",
     "@angular/compiler": "~8.1.3",
@@ -19,6 +22,10 @@
     "@angular/platform-browser": "~8.1.3",
     "@angular/platform-browser-dynamic": "~8.1.3",
     "@angular/router": "~8.1.3",
+    "@devoto13/angular-fontawesome": "^0.5.0-5",
+    "@fortawesome/angular-fontawesome": "~0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -42,6 +49,9 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3",
+    "prettier": "^1.12.1",
+    "lint-staged": "^7.1.2",
+    "husky": "^0.14.3"
   }
 }
