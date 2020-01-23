@@ -1,7 +1,11 @@
 .header {
-  background-color: lightgray;
+  background-color: #222233;
   margin: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #aaccff;
+
+  &.is-open {
+    background-color: #111122;
+  }
 
   &__trigger {
     background: none;
@@ -20,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    color: #aaccff;
   }
 
   &__trigger:focus &__title {

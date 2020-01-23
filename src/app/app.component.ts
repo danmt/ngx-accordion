@@ -1,6 +1,8 @@
 import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { AccordionHeaderComponent } from './shared/components/accordion-header/accordion-header.component';
 
+const KEY_HOME = 36;
+const KEY_END = 35;
 const KEY_UP = 38;
 const KEY_DOWN = 40;
 
@@ -57,10 +59,21 @@ export class AppComponent {
       return;
     }
 
-    if (event.keyCode === KEY_UP) {
-      this.goToPrevious();
-    } else if (event.keyCode === KEY_DOWN) {
-      this.goToNext();
+    switch (event.keyCode) {
+      case KEY_UP:
+        this.goToPrevious();
+        return;
+      case KEY_DOWN:
+        this.goToNext();
+        return;
+      case KEY_HOME:
+        this.currentlyFocused = 0;
+        return;
+      case KEY_END:
+        this.currentlyFocused = this.panelQuantity - 1;
+        return;
+      default:
+        return;
     }
   }
 }

@@ -6,34 +6,48 @@
     (keyup)="handleKeyUp($event)"
   >
     <app-accordion-header
-      [index]="0"
+      index="0"
       [isFocused]="0 === currentlyFocused"
       [isOpen]="0 === currentlyOpen"
       (focused)="setFocus(0)"
       (blurred)="setBlur()"
       (opened)="openPanel(0)"
       (closed)="closePanel()"
-    ></app-accordion-header>
-    <app-accordion-content *ngIf="currentlyOpen === 0"></app-accordion-content>
+    >
+      <app-accordion-content></app-accordion-content>
+    </app-accordion-header>
     <app-accordion-header
-      [index]="1"
+      index="1"
       [isFocused]="1 === currentlyFocused"
       [isOpen]="1 === currentlyOpen"
       (focused)="setFocus(1)"
       (blurred)="setBlur()"
       (opened)="openPanel(1)"
       (closed)="closePanel()"
-    ></app-accordion-header>
-    <app-accordion-content *ngIf="currentlyOpen === 1"></app-accordion-content>
+    >
+      <app-accordion-content></app-accordion-content>
+    </app-accordion-header>
     <app-accordion-header
-      [index]="2"
+      index="2"
       [isFocused]="2 === currentlyFocused"
       [isOpen]="2 === currentlyOpen"
       (focused)="setFocus(2)"
       (blurred)="setBlur()"
       (opened)="openPanel(2)"
       (closed)="closePanel()"
-    ></app-accordion-header>
-    <app-accordion-content *ngIf="currentlyOpen === 2"></app-accordion-content>
+    >
+      <app-accordion-content></app-accordion-content>
+    </app-accordion-header>
+    <app-accordion-header
+      index="3"
+      [isFocused]="3 === currentlyFocused"
+      [isOpen]="3 === currentlyOpen"
+      (focused)="setFocus(3)"
+      (blurred)="setBlur()"
+      (opened)="openPanel(3)"
+      (closed)="closePanel()"
+    >
+      <app-accordion-content></app-accordion-content>
+    </app-accordion-header>
   </div>
 </div>

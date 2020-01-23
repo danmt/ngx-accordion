@@ -1,10 +1,10 @@
 import {
   Component,
-  OnInit,
   ChangeDetectionStrategy,
   Output,
   EventEmitter,
-  Input
+  Input,
+  TemplateRef
 } from '@angular/core';
 
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +18,7 @@ import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 export class AccordionHeaderComponent {
   faAngleDown = faAngleDown;
   faAngleUp = faAngleUp;
+  @Input() panel: TemplateRef<any>;
   @Input() index: number;
   @Input() isFocused: boolean;
   @Input() isOpen: boolean;
@@ -35,7 +36,6 @@ export class AccordionHeaderComponent {
   }
 
   togglePanel() {
-    console.log(this.isOpen);
     if (!this.isOpen) {
       this.opened.emit();
     } else {

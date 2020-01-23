@@ -1,10 +1,13 @@
-<h2 class="header">
+<h2 class="header" [ngClass]="{ 'is-open': isOpen }">
   <button
+    [id]="'accordion-' + index"
     class="header__trigger"
     [appFocusable]="isFocused"
     (click)="togglePanel()"
     (focus)="setFocus()"
     (blur)="setBlur()"
+    [attr.aria-expanded]="isOpen"
+    [attr.aria-controls]="'panel-' + index"
   >
     <div class="header__title">
       <span>Titulo</span>
@@ -13,3 +16,11 @@
     </div>
   </button>
 </h2>
+
+<div
+  [id]="'panel-' + index"
+  [attr.aria-labelledby]="'accordion-' + index"
+  role="region"
+>
+  <ng-content *ngIf="isOpen"></ng-content>
+</div>
