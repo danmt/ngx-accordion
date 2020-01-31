@@ -49,5 +49,16 @@
     >
       <app-accordion-content></app-accordion-content>
     </app-accordion-header>
+    <app-accordion-header
+      index="4"
+      [isFocused]="4 === currentlyFocused"
+      [isOpen]="4 === currentlyOpen"
+      (focused)="setFocus(4)"
+      (blurred)="setBlur()"
+      (opened)="openPanel(4)"
+      (closed)="closePanel()"
+    >
+      <app-accordion-content></app-accordion-content>
+    </app-accordion-header>
   </div>
 </div>
