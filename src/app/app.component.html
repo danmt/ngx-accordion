@@ -62,3 +62,13 @@
     </app-accordion-header>
   </div>
 </div>
+
+<h3 *appAccordionHeader="{ isOpen: 0 === currentlyOpen }; let isOpen = isOpen">
+  <button
+    (click)="
+      currentlyOpen = isOpen ? (currentlyOpen = -1) : (currentlyOpen = 0)
+    "
+  >
+    Title {{ isOpen }}
+  </button>
+</h3>
