@@ -5,4 +5,12 @@
   &.focus {
     border-color: hsl(216, 94%, 73%);
   }
+
+  &__panel {
+    margin: 0;
+    padding: 0.5rem;
+    height: 100px;
+    background-color: #333344;
+    color: #cceeff;
+  }
 }

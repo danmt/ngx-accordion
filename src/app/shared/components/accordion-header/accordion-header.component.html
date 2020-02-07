@@ -1,26 +1,19 @@
 <h2 class="header" [ngClass]="{ 'is-open': isOpen }">
   <button
-    [id]="'accordion-' + index"
     class="header__trigger"
     [appFocusable]="isFocused"
     (click)="togglePanel()"
     (focus)="setFocus()"
     (blur)="setBlur()"
-    [attr.aria-expanded]="isOpen"
-    [attr.aria-controls]="'panel-' + index"
   >
     <div class="header__title">
-      <span>Titulo</span>
+      <span>{{ headerTitle }}</span>
       <fa-icon *ngIf="!isOpen" [icon]="faAngleDown"></fa-icon>
       <fa-icon *ngIf="isOpen" [icon]="faAngleUp"></fa-icon>
     </div>
   </button>
 </h2>
 
-<div
-  [id]="'panel-' + index"
-  [attr.aria-labelledby]="'accordion-' + index"
-  role="region"
->
+<div>
   <ng-content *ngIf="isOpen"></ng-content>
 </div>

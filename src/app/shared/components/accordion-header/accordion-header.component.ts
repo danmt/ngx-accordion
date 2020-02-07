@@ -3,8 +3,7 @@ import {
   ChangeDetectionStrategy,
   Output,
   EventEmitter,
-  Input,
-  TemplateRef
+  Input
 } from '@angular/core';
 
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +17,7 @@ import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 export class AccordionHeaderComponent {
   faAngleDown = faAngleDown;
   faAngleUp = faAngleUp;
-  @Input() panel: TemplateRef<any>;
+  @Input() headerTitle: string;
   @Input() index: number;
   @Input() isFocused: boolean;
   @Input() isOpen: boolean;

@@ -1,11 +1,8 @@
 <div>
   <h1>Accordion</h1>
-  <div
-    class="accordion"
-    [ngClass]="{ focus: focus }"
-    (keyup)="handleKeyUp($event)"
-  >
+  <div class="accordion" [ngClass]="{ focus: focus }">
     <app-accordion-header
+      headerTitle="Title 1"
       index="0"
       [isFocused]="0 === currentlyFocused"
       [isOpen]="0 === currentlyOpen"
@@ -14,9 +11,22 @@
       (opened)="openPanel(0)"
       (closed)="closePanel()"
     >
-      <app-accordion-content></app-accordion-content>
+      <div class="accordion__panel">
+        <fieldset>
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+        </fieldset>
+      </div>
     </app-accordion-header>
     <app-accordion-header
+      headerTitle="Title 2"
       index="1"
       [isFocused]="1 === currentlyFocused"
       [isOpen]="1 === currentlyOpen"
@@ -25,9 +35,22 @@
       (opened)="openPanel(1)"
       (closed)="closePanel()"
     >
-      <app-accordion-content></app-accordion-content>
+      <div class="accordion__panel">
+        <fieldset>
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+        </fieldset>
+      </div>
     </app-accordion-header>
     <app-accordion-header
+      headerTitle="Title 3"
       index="2"
       [isFocused]="2 === currentlyFocused"
       [isOpen]="2 === currentlyOpen"
@@ -36,9 +59,22 @@
       (opened)="openPanel(2)"
       (closed)="closePanel()"
     >
-      <app-accordion-content></app-accordion-content>
+      <div class="accordion__panel">
+        <fieldset>
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+        </fieldset>
+      </div>
     </app-accordion-header>
     <app-accordion-header
+      headerTitle="Title 4"
       index="3"
       [isFocused]="3 === currentlyFocused"
       [isOpen]="3 === currentlyOpen"
@@ -47,18 +83,19 @@
       (opened)="openPanel(3)"
       (closed)="closePanel()"
     >
-      <app-accordion-content></app-accordion-content>
-    </app-accordion-header>
-    <app-accordion-header
-      index="4"
-      [isFocused]="4 === currentlyFocused"
-      [isOpen]="4 === currentlyOpen"
-      (focused)="setFocus(4)"
-      (blurred)="setBlur()"
-      (opened)="openPanel(4)"
-      (closed)="closePanel()"
-    >
-      <app-accordion-content></app-accordion-content>
+      <div class="accordion__panel">
+        <fieldset>
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+
+          <label style="display: block; margin-bottom: 1rem">
+            Text:
+            <input />
+          </label>
+        </fieldset>
+      </div>
     </app-accordion-header>
   </div>
 </div>
