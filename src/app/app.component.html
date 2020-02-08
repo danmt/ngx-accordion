@@ -1,6 +1,10 @@
 <div>
   <h1>Accordion</h1>
-  <div class="accordion" [ngClass]="{ focus: focus }">
+  <div
+    class="accordion"
+    [ngClass]="{ focus: focus }"
+    (keyup)="handleKeyUp($event)"
+  >
     <app-accordion-header
       headerTitle="Title 1"
       index="0"
