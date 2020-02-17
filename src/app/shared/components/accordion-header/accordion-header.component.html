@@ -6,8 +6,6 @@
     (click)="togglePanel()"
     (focus)="setFocus()"
     (blur)="setBlur()"
-    [attr.aria-expanded]="isOpen"
-    [attr.aria-controls]="'panel-' + index"
   >
     <div class="header__title">
       <span>{{ headerTitle }}</span>
@@ -16,10 +14,6 @@
   </button>
 </h2>
 
-<div
-  [id]="'panel-' + index"
-  [attr.aria-labelledby]="'accordion-' + index"
-  role="region"
->
+<div>
   <ng-content *ngIf="isOpen"></ng-content>
 </div>
