@@ -6,7 +6,7 @@ import {
   Input
 } from '@angular/core';
 
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-accordion-header',
@@ -15,7 +15,6 @@ import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AccordionHeaderComponent {
-  faAngleDown = faAngleDown;
   faAngleUp = faAngleUp;
   @Input() headerTitle: string;
   @Input() index: number;

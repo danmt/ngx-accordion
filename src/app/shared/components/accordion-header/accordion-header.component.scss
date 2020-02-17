@@ -3,8 +3,16 @@
   margin: 0;
   border-bottom: 1px solid #aaccff;
 
+  fa-icon {
+    transition: 0.5s;
+  }
+
   &.is-open {
     background-color: #111122;
+
+    fa-icon {
+      transform: rotate(180deg);
+    }
   }
 
   &__trigger {
