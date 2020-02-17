@@ -95,7 +95,7 @@ Optionally, each element that serves as a container for panel content has role r
 
 ## Implementation
 
-If you want to code along the way, I created a repository that has a [branch with a starter accordion](). Clone that repository and let's do this together.
+If you want to code along the way, I created a repository that has a [branch with a starter accordion](https://github.com/danmt/ngx-accordion/tree/starter). Clone that repository and let's do this together.
 
 You dont have to care about the structure, the code I just gave you already has that. Our focus will be in the Keyboard Interactions and the WAI-ARIA Roles, States, and Properties.
 
@@ -107,7 +107,7 @@ I decided to allow users to collapse an expanded panel, so there's only one thin
 
 #### 2.2. Tab
 
-The Tab funcionality comes out of the box too, as long as we make items `tabbable`. Since the headers are buttons that's already true. One thing to have in mind is that panels content shouldnt be `tabbable` when collapsed, but if you read [5 Tips to Make your Angular Apps more Accessible]() you know that the `ngIf` directive removes the entire content so we don't have to do nothing else.
+The Tab funcionality comes out of the box too, as long as we make items `tabbable`. Since the headers are buttons that's already true. One thing to have in mind is that panels content shouldnt be `tabbable` when collapsed, but if you read [5 Tips to Make your Angular Apps more Accessible](https://dev.to/thisdotmedia/5-tips-to-make-your-angular-application-more-accessible-37le) you know that the `ngIf` directive removes the entire content so we don't have to do nothing else.
 
 #### 2.3. Shift + Tab
 
@@ -245,9 +245,8 @@ The accordion header template will end up looking like this:
     [attr.aria-controls]="'panel-' + index"
   >
     <div class="header__title">
-      <span>Titulo</span>
-      <fa-icon *ngIf="!isOpen" [icon]="faAngleDown"></fa-icon>
-      <fa-icon *ngIf="isOpen" [icon]="faAngleUp"></fa-icon>
+      <span>{{ headerTitle }}</span>
+      <fa-icon [icon]="faAngleUp"></fa-icon>
     </div>
   </button>
 </h2>
@@ -265,4 +264,4 @@ The accordion header template will end up looking like this:
 
 I know this one was a little longer than the usual Make it Accessible articles, but it had to be done. We definetely needed to go into detail and build a custom component that was totally compliant with the specs. Just as a reminder, make sure you have unique ids and even thought what I just gave you isnt reusable (we are not building an open source library), can definetely give you more understanding on how to do this on your own.
 
-I'm currently working in my free time on building a small library that includes all the concepts I dive on this serie. If you would like to help me, feel free to drop a comment or write through Twitter.
+In my free time I'm currently working on building a small library that includes all the concepts I dive on this serie. If you would like to help me, feel free to drop a comment or write through Twitter.
